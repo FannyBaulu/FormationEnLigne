@@ -17,7 +17,7 @@
         </div>
         <div class="flex flex-col items-center">
                     <img class="w-1/2" :src="'/images/formation.jpg'"/>
-                    <h6 class="text-4xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">Site de formation en ligne</h6>
+                    <h6 class="text-4xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">Online courses</h6>
                 </div>
     </div>
 

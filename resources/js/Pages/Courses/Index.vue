@@ -1,7 +1,7 @@
 <template>
     <app-layout>
         <template #header>
-            Liste des formations
+            List of courses
         </template>
 
         <div class="bg-green-200 rounded text-green-500 p-3 mb-2" v-if="$page.props.flash.message">
@@ -13,25 +13,24 @@
                 style=" width:25%; border: 1px solid black; "
                 v-for="course in this.courseList.data" v-bind:key="course.id">
                     <div class="flex-col flex items-center">
-                        <div class="text-sm text-gray-500">Mis en ligne par {{course.user.name}} - <span
+                        <div class="text-sm text-gray-500">Put online by {{course.user.name}} - <span
                                 class=" text-gray-500">{{course.participants}} participant<span
                                     v-if="parseInt(course.participants) > 1">s</span>
                             </span></div>
                         <div class="flex flex-col justify-between  items-center">
                             <div class="text-xl px-3 text-center">{{course.title}}</div>
-                            <span class="font-semibold text-gray-500">Durée: {{convert(course.total_duration)}}</span>
-                            <div class="text-sm text-pink-400 py-3 text-center">{{course.episodes_count}} épisodes</div>
+                            <span class="font-semibold text-gray-500">Duration: {{convert(course.total_duration)}}</span>
+                            <div class="text-sm text-pink-400 py-3 text-center">{{course.episodes_count}} episodes</div>
                         </div>
                     </div>
                 <div style="font-size:small;">{{course.description}}</div>
                 
                 <div class="m-2">
                     <a :href="'course/' + course.id"
-                    class="bg-indigo-500 text-white my-1 px-2 py-1 text-sm rounded hover:bg-indigo-700">Voir la
-                    formation</a>
+                    class="bg-indigo-500 text-white my-1 px-2 py-1 text-sm rounded hover:bg-indigo-700">See course</a>
                     <a :href="'courses/edit/' + course.id" v-if="course.update"
-                    class="bg-gray-500 text-white my-1 px-2 py-1 text-sm rounded hover:bg-gray-700">Modifier la
-                    formation</a>
+                    class="bg-gray-500 text-white my-1 px-2 py-1 text-sm rounded hover:bg-gray-700">Modify
+                    course</a>
                 </div>
             </div>
         </div>

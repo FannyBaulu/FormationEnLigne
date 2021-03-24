@@ -21,16 +21,23 @@ Remplir le .env avec le nom du schéma, et vos identifiants de connexion à la b
 Ajouter la ligne suivante dans votre .env :
 YOUTUBE_API_KEY=""
 
-Y insérerer votre clé API Youtube que vous pouvez récupérez sur le site de Google Cloud Platform de la manière suivante:
-- Y créer un projet. Activer les api et services. Activer l'api suivante : Youtube Data API v3
+Y insérerer votre clé API Youtube que vous pouvez récupérez sur le site de Google Cloud Platform (https://cloud.google.com/) de la manière suivante:
+- Onglet Console
+- Y créer un projet.Allez sur API et Services. Activer les api et services. Activer l'api suivante : Youtube Data API v3
 - Génerer une clé API en allant modifié les paramètres de celle-ci pour enlever les restrictions liés à l'application (seulement si vous effectuez vos tests en local).
+
+Pour évitez les erreurs SSL lors de la création de la formation, vous devez télécharger le fichier suivant:
+http://curl.haxx.se/ca/cacert.pem
+Allez ensuite modifier votre php.ini à la ligne:
+curl.cainfo =
+et ajouter le chemin vers le fichier que vous venez de télécharger.
 
 Lancer:
 `composer install` 
 `npm install`
 `php artisan key:generate`
 
-Avant de lancer les migrations, allez dans le dossier Course.php et vérifiez que la méthode "booted" est bien commentée.
+Avant de lancer les migrations, allez dans le fichier Course.php (model) et vérifiez que la méthode "booted" est bien commentée.
 `php artisan migrate`
 `php artisan db:seed`
 Une fois les migrations et seeders effectués, décommentez la fonction "booted".

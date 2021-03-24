@@ -5299,7 +5299,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -5482,6 +5481,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -5524,6 +5525,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -30293,7 +30302,7 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                                Formations\n                            "
+                              "\n                                Courses\n                            "
                             )
                           ]
                         )
@@ -32833,7 +32842,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\n            Modification de " +
+                    "\n            Modification of " +
                       _vm._s(_vm.courseData.title) +
                       "\n        "
                   )
@@ -32890,7 +32899,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                            Titre de la formation\n                        "
+                          "\n                            Title of the course\n                        "
                         )
                       ]
                     ),
@@ -32929,7 +32938,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                            Description de la formation\n                        "
+                          "\n                            Description of the course\n                        "
                         )
                       ]
                     ),
@@ -32967,7 +32976,7 @@ var render = function() {
                     { staticClass: "mb-4" },
                     [
                       _c("h2", { staticClass: "text-2xl mb-2" }, [
-                        _vm._v("Episodes de la formation")
+                        _vm._v("Course's episodes")
                       ]),
                       _vm._v(" "),
                       _vm._l(_vm.courseData.episodes, function(episode, index) {
@@ -32981,7 +32990,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                Titre de l'épisode n°" +
+                                "\n                                Title of episode n°" +
                                   _vm._s(index + 1) +
                                   "\n                            "
                               )
@@ -33026,7 +33035,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                Description de l'épisode n°" +
+                                "\n                                Description of episode n°" +
                                   _vm._s(index + 1) +
                                   "\n                            "
                               )
@@ -33073,7 +33082,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                URL de la video de l'épisode n°" +
+                                "\n                                Video's URL of episode n°" +
                                   _vm._s(index + 1) +
                                   "\n                            "
                               )
@@ -33173,7 +33182,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                        Modifier ma formation\n                    "
+                        "\n                        Edit formation\n                    "
                       )
                     ]
                   )
@@ -33216,7 +33225,7 @@ var render = function() {
         {
           key: "header",
           fn: function() {
-            return [_vm._v("\n        Liste des formations\n    ")]
+            return [_vm._v("\n        List of courses\n    ")]
           },
           proxy: true
         }
@@ -33250,9 +33259,7 @@ var render = function() {
             [
               _c("div", { staticClass: "flex-col flex items-center" }, [
                 _c("div", { staticClass: "text-sm text-gray-500" }, [
-                  _vm._v(
-                    "Mis en ligne par " + _vm._s(course.user.name) + " - "
-                  ),
+                  _vm._v("Put online by " + _vm._s(course.user.name) + " - "),
                   _c("span", { staticClass: " text-gray-500" }, [
                     _vm._v(_vm._s(course.participants) + " participant"),
                     parseInt(course.participants) > 1
@@ -33273,14 +33280,15 @@ var render = function() {
                     _vm._v(" "),
                     _c("span", { staticClass: "font-semibold text-gray-500" }, [
                       _vm._v(
-                        "Durée: " + _vm._s(_vm.convert(course.total_duration))
+                        "Duration: " +
+                          _vm._s(_vm.convert(course.total_duration))
                       )
                     ]),
                     _vm._v(" "),
                     _c(
                       "div",
                       { staticClass: "text-sm text-pink-400 py-3 text-center" },
-                      [_vm._v(_vm._s(course.episodes_count) + " épisodes")]
+                      [_vm._v(_vm._s(course.episodes_count) + " episodes")]
                     )
                   ]
                 )
@@ -33298,7 +33306,7 @@ var render = function() {
                       "bg-indigo-500 text-white my-1 px-2 py-1 text-sm rounded hover:bg-indigo-700",
                     attrs: { href: "course/" + course.id }
                   },
-                  [_vm._v("Voir la\n                formation")]
+                  [_vm._v("See course")]
                 ),
                 _vm._v(" "),
                 course.update
@@ -33309,7 +33317,7 @@ var render = function() {
                           "bg-gray-500 text-white my-1 px-2 py-1 text-sm rounded hover:bg-gray-700",
                         attrs: { href: "courses/edit/" + course.id }
                       },
-                      [_vm._v("Modifier la\n                formation")]
+                      [_vm._v("Modify\n                course")]
                     )
                   : _vm._e()
               ])
@@ -33406,7 +33414,7 @@ var render = function() {
           }
         }
       },
-      [_vm._v(" " + _vm._s(this.isWatched ? "Terminé" : "Terminé?") + " ")]
+      [_vm._v(" " + _vm._s(this.isWatched ? "Done" : "Done?") + " ")]
     )
   ])
 }
@@ -33518,7 +33526,7 @@ var render = function() {
                             }
                           }
                         },
-                        [_vm._v("Voir l'épisode")]
+                        [_vm._v("See course")]
                       )
                     ]),
                     _vm._v(" "),
@@ -33630,7 +33638,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                            Titre de la formation\n                        "
+                          "\n                            Title of the course\n                        "
                         )
                       ]
                     ),
@@ -33669,7 +33677,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                            Description de la formation\n                        "
+                          "\n                            Description of the course\n                        "
                         )
                       ]
                     ),
@@ -33703,7 +33711,7 @@ var render = function() {
                     { staticClass: "mb-4" },
                     [
                       _c("h2", { staticClass: "text-2xl mb-2" }, [
-                        _vm._v("Episodes de la formation")
+                        _vm._v("Course's episodes")
                       ]),
                       _vm._v(" "),
                       _vm._l(_vm.form.episodes, function(episode, index) {
@@ -33717,7 +33725,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                Titre de l'épisode n°" +
+                                "\n                                Title of the episode n°" +
                                   _vm._s(index + 1) +
                                   "\n                            "
                               )
@@ -33760,7 +33768,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                Description de l'épisode n°" +
+                                "\n                                Description of the episode n°" +
                                   _vm._s(index + 1) +
                                   "\n                            "
                               )
@@ -33805,7 +33813,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                URL de la video de l'épisode n°" +
+                                "\n                                Video's URL of the episode n°" +
                                   _vm._s(index + 1) +
                                   " "
                               ),
@@ -33813,7 +33821,7 @@ var render = function() {
                               _vm._v(" "),
                               _c("em", { staticClass: "text-red-600" }, [
                                 _vm._v(
-                                  "(Doit être un lien youtube de type embed, si vous voulez accéder aux durées. ex: https://www.youtube.com/embed/D3oivlcoEvw)"
+                                  '(Must be a "embed" youtube link in order to access video\'s duration. ex: https://www.youtube.com/embed/D3oivlcoEvw)'
                                 )
                               ])
                             ]
@@ -33896,7 +33904,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                        Créer ma formation\n                    "
+                        "\n                        Create course\n                    "
                       )
                     ]
                   )
@@ -35352,7 +35360,7 @@ var render = function() {
             staticClass:
               "text-4xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate"
           },
-          [_vm._v("Site de formation en ligne")]
+          [_vm._v("Online courses")]
         )
       ])
     ]

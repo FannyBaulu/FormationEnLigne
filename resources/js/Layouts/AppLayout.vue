@@ -21,7 +21,7 @@
                                     Dashboard
                                 </jet-nav-link>
                                 <jet-nav-link :href="route('courses')" :active="route().current('courses')">
-                                    Formations
+                                    Courses
                                 </jet-nav-link>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="bg-green-500 px-2 py-2 rounded text-white" @click="toggleProgress()"> {{this.isWatched ? 'Terminé' : 'Terminé?'}} </button>
+        <button class="bg-green-500 px-2 py-2 rounded text-white" @click="toggleProgress()"> {{this.isWatched ? 'Done' : 'Done?'}} </button>
     </div>
 </template>
 
