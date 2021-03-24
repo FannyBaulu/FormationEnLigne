@@ -5312,6 +5312,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: ['courses'],
   methods: {
+    /**
+     * Convert the time in seconds from database in hours/minutes/seconds time format.
+     */
     convert: function convert(timestamps) {
       var hours = Math.floor(timestamps / 3600);
       var minutes = Math.floor(timestamps / 60) - hours * 60;
@@ -5350,6 +5353,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
+    /**
+     * Calculate the percentage of the course completed by comparing
+     * the number of episodes watched and the number of episodes in the course.
+     */
     percentage: function percentage() {
       var _this = this;
 
@@ -5500,8 +5507,6 @@ __webpack_require__.r(__webpack_exports__);
         behavior: 'smooth'
       });
     }
-  },
-  mounted: function mounted() {// console.log(this.courses)
   }
 });
 
@@ -6529,6 +6534,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -35327,7 +35338,23 @@ var render = function() {
             ],
             2
           )
-        : _vm._e()
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex flex-col items-center" }, [
+        _c("img", {
+          staticClass: "w-1/2",
+          attrs: { src: "/images/formation.jpg" }
+        }),
+        _vm._v(" "),
+        _c(
+          "h6",
+          {
+            staticClass:
+              "text-4xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate"
+          },
+          [_vm._v("Site de formation en ligne")]
+        )
+      ])
     ]
   )
 }

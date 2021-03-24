@@ -56,6 +56,9 @@
         props: ['courses'],
 
         methods: {
+            /**
+             * Convert the time in seconds from database in hours/minutes/seconds time format.
+             */
             convert(timestamps){
                 let hours = Math.floor(timestamps / 3600);
                 let minutes = Math.floor(timestamps / 60)-(hours*60);

@@ -17,6 +17,10 @@ export default {
     },
 
     computed: {
+        /**
+         * Calculate the percentage of the course completed by comparing
+         * the number of episodes watched and the number of episodes in the course.
+         */
         percentage(){
             let filteredEp = this.episodes.filter(courseEp =>{
                 return this.watchedEpisodesData.find(watchedEp => {

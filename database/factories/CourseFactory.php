@@ -17,9 +17,8 @@ class CourseFactory extends Factory
     protected $model = Course::class;
 
     /**
-     * Avant le lancement de la commande pour les seeders, allez commenter la fonction
-     * booted dans le model : Course.php. Décommentez la fonction, une fois les seeders effectués.
-     *
+     * Define the model's default state.
+     * 
      * @return array
      */
     public function definition()

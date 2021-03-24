@@ -121,7 +121,8 @@ class CourseController extends Controller
     }
 
     /**
-     * A commenter
+     * Stock/unstock the episode selected by the user in the completion table in the database the toggle method.
+     * Allowing it to keep track of watched episodes.
      *
      * @param Request $request
      */
